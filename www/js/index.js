@@ -50,7 +50,7 @@ var app = {
 	    window.setTimeout(function() {
 	        console.log((new Date())+" - Loading image..");
 	        app.loadImage();
-	    }, 500);
+	    }, 100);
 	},
     // Update DOM on a Received Event
     receivedEvent: function(id) {
