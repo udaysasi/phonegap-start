@@ -113,3 +113,13 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+/* OUR CSS */
+img {
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s; /* Safari */
+}
+
+img.flip {
+    -webkit-transform:rotate(180deg);
+}

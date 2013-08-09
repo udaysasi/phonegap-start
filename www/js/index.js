@@ -35,6 +35,22 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
     },
+    loadImage : function(n) {
+    		var node = document.getElementById("placehere");
+		    while (node.hasChildNodes()) {
+        		node.removeChild(node.lastChild);
+		    }
+		    var elem = document.createElement("img");
+		    elem.setAttribute("src", "http://www.google-analytics.com/__utm.gif");
+		    node.appendChild(elem);
+    
+		    document.getElementById("hourglass").className = (document.getElementById("hourglass").className=="flip")?"":"flip";
+    
+		    window.setTimeout(function() {
+		        console.log((new Date())+" - Loading image..");
+		        app.loadImage();
+		    }, 1000);
+	},
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -45,5 +61,6 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+		app.loadImage();
     }
 };
