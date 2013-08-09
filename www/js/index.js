@@ -27,6 +27,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        //document.addEventListener('click', this.onDeviceReady, false);
     },
     // deviceready Event Handler
     //
@@ -36,20 +37,20 @@ var app = {
         app.receivedEvent('deviceready');
     },
     loadImage : function(n) {
-    		var node = document.getElementById("placehere");
-		    while (node.hasChildNodes()) {
-        		node.removeChild(node.lastChild);
-		    }
-		    var elem = document.createElement("img");
-		    elem.setAttribute("src", "http://www.google-analytics.com/__utm.gif");
-		    node.appendChild(elem);
-    
-		    document.getElementById("hourglass").className = (document.getElementById("hourglass").className=="flip")?"":"flip";
-    
-		    window.setTimeout(function() {
-		        console.log((new Date())+" - Loading image..");
-		        app.loadImage();
-		    }, 1000);
+		var node = document.getElementById("placehere");
+	    while (node.hasChildNodes()) {
+    		node.removeChild(node.lastChild);
+	    }
+	    var elem = document.createElement("img");
+	    elem.setAttribute("src", "http://www.google-analytics.com/__utm.gif");
+	    node.appendChild(elem);
+
+	    document.getElementById("hourglass").className = (document.getElementById("hourglass").className=="flip")?"":"flip";
+
+	    window.setTimeout(function() {
+	        console.log((new Date())+" - Loading image..");
+	        app.loadImage();
+	    }, 500);
 	},
     // Update DOM on a Received Event
     receivedEvent: function(id) {

@@ -26,7 +26,7 @@
         <title>Keep Alive</title>
     </head>
     <body>
-        <div class="app">
+        <div class="app" style="display:none">
             <h1>PhoneGap</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
@@ -38,14 +38,22 @@
 	        <h2>A simple app developed to demo the new Data RSSI feature</h2>
     	</header>
     	<section>
+    		<h4>
   	  		There is nothing to see here.. This app does nothing but keep the network connection live by sending data packets to the internet frequently. 
+  	  		The activity on hour glass is an indication of the network activity to/from the device.
+  	  		</h4>
     	</section>
     	<div id="placehere"></div>
-    	<img id="hourglass" src="img/hourglass.png">
+    	<div class="imgcenter">
+    		<img id="hourglass" src="img/hourglass.png">
+    	</div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
+        <footer>
+        	Developed by Uday Kumar Pyda
+        </footer>
     </body>
 </html>
